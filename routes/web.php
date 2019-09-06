@@ -21,3 +21,4 @@ Route::get('/test/redis','UserController@redisTest');       //测试
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/test/ss', 'TestController@ss');
