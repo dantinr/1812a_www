@@ -12,9 +12,6 @@
 */
 
 Route::get('/', function () {
-    echo date("Y-m-d H:i:s");
-//    echo '<pre>';print_r($_SERVER);echo '</pre>';
-//    //phpinfo();
     return view('welcome');
 });
 
