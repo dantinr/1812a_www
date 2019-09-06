@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    echo '<pre>';print_r($_SERVER);echo '</pre>';
-    //phpinfo();
-    //return view('welcome');
+//    echo '<pre>';print_r($_SERVER);echo '</pre>';
+//    //phpinfo();
+    return view('welcome');
 });
 
 Route::get('/user/add','UserController@add');       //测试
