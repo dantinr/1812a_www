@@ -22,3 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test/ss', 'TestController@ss');
+
+
+Route::get('/prize','PrizeController@index');       //抽奖
+Route::post('/prize','PrizeController@prizeDo');       //抽奖
