@@ -35,6 +35,23 @@ return [
 
     'connections' => [
 
+        'mysql' => [
+            'read' => [
+                'host'  => env('MYSQL_R'),
+            ],
+            'write' => [
+                'host'  => env('MYSQL_W'),
+            ],
+            'sticky'    => true,
+            'driver'    => 'mysql',
+            'database'  => '1812a',
+            'username'  => 'root',
+            'password'  => 'root',
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix'    => '',
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
@@ -43,10 +60,20 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        'mysql000' => [
+            'read' => [
+                'host' => [
+
+                ],
+            ],
+            'write' => [
+                'host' => [
+                    '196.168.91.161',
+                ],
+            ],
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            //'url' => env('DATABASE_URL'),
+            //'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
