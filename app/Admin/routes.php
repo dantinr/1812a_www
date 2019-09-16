@@ -13,4 +13,6 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->resource('coupon', CouponController::class);       //优惠券管理
 
+    $router->resource('category', CategoryController::class);       // 分类管理
+
 });
