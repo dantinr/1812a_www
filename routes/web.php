@@ -32,3 +32,7 @@ Route::get('/test/ss', 'TestController@ss');
 
 Route::get('/prize','PrizeController@index');       //抽奖
 Route::post('/prize','PrizeController@prizeDo');       //抽奖
+//优惠券
+Route::get('/coupon', 'CouponController@index');
+Route::get('/coupon/get', 'CouponController@getCoupon');        //获取优惠券
+
