@@ -14,5 +14,6 @@ Route::group([
     $router->resource('coupon', CouponController::class);       //优惠券管理
 
     $router->resource('category', CategoryController::class);       // 分类管理
+    $router->resource('goods', GoodsController::class);             //商品管理
 
 });
