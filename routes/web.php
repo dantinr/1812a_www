@@ -19,10 +19,14 @@ Route::get('/info', function () {
     phpinfo();
 });
 
-Route::get('/user/add','UserController@add');       //测试
 Route::get('/test/redis','UserController@redisTest');       //测试
 Route::get('/test/10k','TestController@insert10k');       //测试
 Route::get('/test/10k2','TestController@insert10k2');       //测试
+Route::get('/test/ssh','TestController@testSsh');       //测试
+
+
+Route::get('/user/add','UserController@add');       //测试
+
 
 Auth::routes();
 

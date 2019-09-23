@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use App\Model\UserModel;
 use Illuminate\Support\Str;
 use DB;
+use phpseclib\Net\SSH2;
 
 class TestController extends Controller
 {
@@ -92,5 +93,14 @@ class TestController extends Controller
             //$uid = DB::connection()->table('p_users')->insertGetId($data);
             echo "UID: ".$uid;echo '</br>';
         }
+    }
+
+    public function testSsh()
+    {
+        $ssh = new SSH2('192.168.91.130');
+        $info = $ssh->login('liwei','123456abcd');
+        var_dump($info);
+        $rs = $ssh->exec('ls -l');
+        echo '<pre>';print_r($rs);echo '</pre>';
     }
 }
